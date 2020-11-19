@@ -1,1 +1,1 @@
-web: gunicorn pf.wsgi
+web: gunicorn mywebapp.wsgi
