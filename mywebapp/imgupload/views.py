@@ -17,8 +17,8 @@ def imageprocess(request):
     form = ImageUploadForm(request.POST,request.FILES)
     if form.is_valid():
         handle_uploaded_file(request.FILES['image'])
-        model = ResNet50(weights='imagenet')
-        img_path = 'img.jpeg'
+        model = ResNet50(weights="imagenet")
+        img_path = ('img.jpeg')
         img =imread(img_path)
         plt.imshow(img)
         img = image.load_img(img_path, target_size=(224, 224))
